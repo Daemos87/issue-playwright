@@ -1,0 +1,154 @@
+{
+  "config": {
+    "forbidOnly": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "maxFailures": 1,
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/agiangrande/Documents/repo/issue-playwright/output",
+        "repeatEach": 1,
+        "retries": 0,
+        "name": "chromium",
+        "testDir": "/Users/agiangrande/Documents/repo/issue-playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/?(*.)+(spec|test).[jt]s"
+        ],
+        "timeout": 40000
+      }
+    ],
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json",
+        {
+          "outputFile": "report.json"
+        }
+      ]
+    ],
+    "rootDir": "/Users/agiangrande/Documents/repo/issue-playwright",
+    "quiet": false,
+    "shard": null,
+    "updateSnapshots": "missing",
+    "workers": 2
+  },
+  "suites": [
+    {
+      "title": "",
+      "file": "long.test.ts",
+      "line": 0,
+      "column": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "long tests",
+          "file": "long.test.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "long test",
+              "ok": true,
+              "tests": [
+                {
+                  "timeout": 40000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "duration": 4058,
+                      "stdout": [
+                        {
+                          "text": "long test finished\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0
+                    }
+                  ]
+                }
+              ],
+              "file": "long.test.ts",
+              "line": 5,
+              "column": 5
+            },
+            {
+              "title": "another long test",
+              "ok": true,
+              "tests": [
+                {
+                  "timeout": 40000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "duration": 3246,
+                      "stdout": [
+                        {
+                          "text": "another long test finished\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0
+                    }
+                  ]
+                }
+              ],
+              "file": "long.test.ts",
+              "line": 12,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "",
+      "file": "short.test.ts",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "short test",
+          "ok": false,
+          "tests": [
+            {
+              "timeout": 40000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "failed",
+                  "duration": 10,
+                  "error": {
+                    "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeFalsy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mtrue\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeFalsy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mtrue\u001b[39m\n    at /Users/agiangrande/Documents/repo/issue-playwright/short.test.ts:4:18\n    at FixtureRunner.resolveParametersAndRunHookOrTest (/Users/agiangrande/Documents/repo/issue-playwright/node_modules/@playwright/test/lib/test/fixtures.js:241:16)\n    at WorkerRunner._runTestWithBeforeHooks (/Users/agiangrande/Documents/repo/issue-playwright/node_modules/@playwright/test/lib/test/workerRunner.js:290:39)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+                  },
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0
+                }
+              ]
+            }
+          ],
+          "file": "short.test.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
